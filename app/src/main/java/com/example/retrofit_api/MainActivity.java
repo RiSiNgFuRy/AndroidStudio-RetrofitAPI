@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements ContentsAdapter.I
                                 db.createEntry(items.get(j).getCrop_id(), items.get(j).getDistrict(), items.get(j).getDistrict_id(), items.get(j).getHindi_name(), items.get(j).getId(), items.get(j).getImage(), items.get(j).getKm(), items.get(j).getLast_date(), items.get(j).getLat(), items.get(j).getLng(), items.get(j).getLocation(), items.get(j).getMarket(), items.get(j).getMeters(), items.get(j).getState(), items.get(j).getUrl_str());
                                 ApplicationClass.items.add(new other_mandi(items.get(j).getCrop_id(),items.get(j).getDistrict(),items.get(j).getDistrict_id(),items.get(j).getHindi_name(),items.get(j).getId(),items.get(j).getImage(),items.get(j).getKm(),items.get(j).getLast_date(),items.get(j).getLat(),items.get(j).getLng(),items.get(j).getLocation(),items.get(j).getMarket(),items.get(j).getMeters(),items.get(j).getState(),items.get(j).getUrl_str()));
                             }
+                            contentsAdapter.notifyDataSetChanged();
                             db.close();
                             } catch (SQLException throwables) {
                             throwables.printStackTrace();
